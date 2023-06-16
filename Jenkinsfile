@@ -12,7 +12,7 @@ pipeline {
                 git credentialsId: 'github', url: 'https://github.com/nagaraju531/ansible_playbooks'
         }
     }
-       state("Check Syntax Check"){
+       stage("Check Syntax Check"){
                steps {
 		dir('/var/lib/jenkins/workspace/Ansible_Tower_PipeLine') {
                    sh "ansible-lint main.yml"
