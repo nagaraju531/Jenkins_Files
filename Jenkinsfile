@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    customWorkspace /root/jenkins_Workspace
     stages {
         stage('CheckOut the Code) {
             steps {
