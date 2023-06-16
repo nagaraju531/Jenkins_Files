@@ -9,7 +9,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 echo "Hello World"
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/nagaraju531/ansible_playbooks'
+                sh "git branch: 'main', credentialsId: 'github', url: 'https://github.com/nagaraju531/ansible_playbooks'"
            }
         }
     }
