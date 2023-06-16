@@ -8,7 +8,7 @@ pipeline {
         stage('CheckOut the Code') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/nagaraju531/ansible_playbooks.git'
+                echo "Hello World"
            }
         }
     }
