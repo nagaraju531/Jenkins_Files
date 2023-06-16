@@ -1,12 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('CheckOut the Code) {
             steps {
                 // Get some code from a GitHub repository
-                echo "..Hello.."
-          
-            }
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/nagaraju531/$Project_Name'
+           }
         }
     }
 }
