@@ -15,7 +15,7 @@ pipeline {
        state("Check Syntax Check"){
            dir('/var/lib/jenkins/workspace/Ansible_Tower_PipeLine') {
                steps {
-                   ansible-lint main.yml
+                  sh "ansible-lint main.yml"
     // some block
 }
 }
