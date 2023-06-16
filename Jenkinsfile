@@ -1,6 +1,10 @@
 pipeline {
-    agent any
-    customWorkspace "/root/jenkins_Workspace"
+    agent {
+    node {
+      label 'linux'
+      customWorkspace '/root/jenkins_Workspace'
+    }
+  }
     stages {
         stage('CheckOut the Code') {
             steps {
