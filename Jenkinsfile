@@ -9,7 +9,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 echo "Hello World"
-                sh "git branch: 'main', credentialsId: 'github', url: 'https://github.com/nagaraju531/ansible_playbooks'"
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/nagaraju531/ansible_playbooks']])
            }
         }
     }
